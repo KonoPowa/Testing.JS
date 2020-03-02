@@ -44,3 +44,6 @@ myArray.shift();
 myArray.unshift(["Paul", 35]);
 console.log(myArray);
 
+var myList = [["milk",2],["bananas",3],["pancakes",4],["bacon",20],["napalm",100]];
+console.log(myList);
+
