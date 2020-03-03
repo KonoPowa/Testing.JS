@@ -51,3 +51,8 @@ function functionWithArgs(a, b){
   console.log(a + b);
 }
 functionWithArgs(20, 5);
+
+function timesFive(num){
+  return num * 5;
+}
+console.log(timesFive)
