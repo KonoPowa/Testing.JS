@@ -148,3 +148,28 @@ function phoneticLookup(val) {
 
 // Change this value to test
 phoneticLookup("charlie");
+
+
+
+
+
+
+
+// Setup
+var myObj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh"
+};
+
+function checkObj(checkProp) {
+  if (myObj.hasOwnProperty(checkProp)){
+    return myObj[checkProp];
+  } else {
+    return "Not Found";
+  }
+  
+  // Your Code Here
+}
+
+checkObj("gift");
