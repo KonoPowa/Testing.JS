@@ -27,18 +27,22 @@ var collection = {
 
 // Only change code below this line
 function updateRecords(id, prop, value) {
-  if(prop !== "tracks" && value !== "") {
+  if(value === ""){
+    delete collection[id][prop];
+  }
+   else if(prop !== "tracks" && value !== "") {
     collection[id][prop] = value ;   
   }else if(prop === "tracks" && !collection.hasOwnProperty(prop)){
-    collection[id][prop] = []
+    collection[id][prop] = collection[id][prop] || []
     collection[id][prop].push(value);
   }else if(prop === "tracks" && value !==""){
     collection[id][prop].push(value);
-  }else if(value === ""){
-    delete collection[id][prop];
   }
 
   return collection;
 }
 
 updateRecords(5439, "artist", "ABBA");
+
+
+console.log(updateRecords(5439, "artist", "ABBA"));
