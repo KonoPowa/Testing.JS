@@ -29,3 +29,12 @@ function randomRange(myMin, myMax) {
 
 var myRandom = randomRange(5, 15);
 console.log(myRandom);
+
+
+
+
+function convertToInteger(str) {
+    return parseInt(str);
+}
+
+convertToInteger("56");
