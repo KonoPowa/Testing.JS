@@ -60,3 +60,12 @@ function printManyTimes(str) {
 
 }
 printManyTimes("freeCodeCamp");
+
+
+
+
+
+
+
+
+const magic = () => new Date();
