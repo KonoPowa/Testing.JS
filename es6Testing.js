@@ -87,3 +87,108 @@ const sum = (...args) => {
   return args.reduce((a, b) => a + b, 0);
 }
 console.log(sum(1, 2, 3, 4)); // 6
+
+
+
+
+
+
+
+//DESTRUCTURING********************************
+
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+// Only change code below this line
+
+const{today,tomorrow} = HIGH_TEMPERATURES;
+
+// Only change code above this line
+
+
+
+
+
+
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+// Only change code below this line
+  
+const { today: highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES;
+
+// Only change code above this line
+
+
+
+
+
+const LOCAL_FORECAST = {
+  yesterday: { low: 61, high: 75 },
+  today: { low: 64, high: 77 },
+  tomorrow: { low: 68, high: 80 }
+};
+
+// Only change code below this line
+  const {today: {low: lowToday, high: highToday}} = LOCAL_FORECAST
+
+// Only change code above this line
+
+
+
+
+
+
+
+let  a = 8, b = 6;
+// Only change code below this line
+    [a,b] = [b,a];
+	
+	
+	
+	
+	
+	const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+  "use strict";
+  // Only change code below this line
+  const [,,...arr] = list; // Change this line
+  // Only change code above this line
+  return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr);
+
+
+
+
+
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+
+// Only change code below this line
+const half = ({max,min}) => (max + min) / 2.0; 
+console.log(half(stats));
+// Only change code above this line
+
+
+
+
+
+
+
+//TEMPLATE LITERAL *****************************
+
+
