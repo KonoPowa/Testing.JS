@@ -192,3 +192,48 @@ console.log(half(stats));
 //TEMPLATE LITERAL *****************************
 
 
+
+
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["id-blacklist", "no-dup-keys"]
+};
+function makeList(arr) {
+  "use strict";
+
+  // Only change code below this line
+  var resultDisplayArray = [];
+  for(var i = 0; i < 3; i++ ){
+  const array = `<li class="text-warning">${result.failure[i]}</li>`;
+  resultDisplayArray.push(array);
+  }
+  // Only change code above this line
+  return resultDisplayArray;
+}
+const resultDisplayArray = makeList(result.failure);
+console.log(makeList(result.failure))
+
+
+
+
+
+//LITERAL DECLARATION******************************************
+
+
+
+const createPerson = (name, age, gender) => {
+  "use strict";
+  // Only change code below this line
+  return {
+    name,
+    age,
+    gender
+  };
+  // Only change code above this line
+};
+
+
+
+
+
