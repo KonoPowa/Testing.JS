@@ -253,4 +253,117 @@ console.log(bicycle.gear);
 
 
 
-////
+
+
+
+//ES6: Use class Syntax to Define a Constructor Function****************************
+
+
+// Only change code below this line
+class Vegetable{
+    constructor(name){
+        this.name = name;
+    }
+}
+// Only change code above this line
+
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // Should display 'carrot'
+
+
+
+
+
+
+
+
+
+
+//ES6: Use getters and setters to Control Access to an Object***************************************
+
+
+// Only change code below this line
+class Thermostat{
+    constructor(temp){
+        this._temp = temp;
+    }
+    //getter
+    get temperature(){
+        return 5/9 * (this._temp - 32)
+    }
+    //setter
+    set temperature(celsius){
+        this._temp = celsius * 9.0 / 5 + 32
+        
+    }
+
+}
+// Only change code above this line
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
+console.log(thermos.temperature)
+
+
+
+
+
+
+
+
+
+//MODULE SCRIPT IN HTML **********************************************************************
+
+
+
+<html>
+  <body>
+    <!-- Only change code below this line -->
+    <script type="module" src = "index.js"></script>
+    <!-- Only change code above this line -->
+  </body>
+</html>
+
+
+
+
+
+
+const uppercaseString = (string) => {
+  return string.toUpperCase();
+}
+
+const lowercaseString = (string) => {
+  return string.toLowerCase()
+}
+
+export {uppercaseString, lowercaseString};
+
+
+
+
+
+  import {uppercaseString, lowercaseString} from './string_functions.js';
+// Only change code above this line
+
+uppercaseString("hello");
+lowercaseString("WORLD!");
+
+
+
+
+
+
+
+import * as stringFunctions from "./string_functions.js";
+// Only change code above this line
+
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
+
+
+
+
+
