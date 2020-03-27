@@ -385,3 +385,23 @@ import subtract from "./math_functions.js";
 
 subtract(7,4);
 
+
+
+
+
+
+
+
+//CREATE A JAVASCRIPT PROMISE*******************************************
+
+
+const makeServerRequest = new Promise((resolve, reject) => {
+
+});
+
+
+
+
+
+
+
