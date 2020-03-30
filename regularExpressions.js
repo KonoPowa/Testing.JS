@@ -98,7 +98,7 @@ let result = chewieQuote.match(chewieRegex);
 
 
 
-//Regular Expressions: Find Characters with Lazy Matching
+//Regular Expressions: Find Characters with Lazy Matching***************
 let text = "<h1>Winter is coming</h1>";
 let myRegex = /<h?1>/; // Change this line
 let result = text.match(myRegex);
@@ -107,7 +107,7 @@ console.log(result)
 
 
 
-//Regular Expressions: Find One or More Criminals in a Hunt CHALLENGE
+//Regular Expressions: Find One or More Criminals in a Hunt CHALLENGE*******************
 let reCriminals = /C+/g; // Change this line
 
 
@@ -126,11 +126,14 @@ let lastRegex = /caboose$/; // Change this line
 let result = lastRegex.test(caboose);
 
 
-//Regular Expressions: Match All Letters and Numbers****************
+//Regular Expressions: Match All Letters and Numbers*******************
 let quoteSample = "The five boxing wizards jump quickly.";
 let alphabetRegexV2 = /\w/g; // Change this line
 let result = quoteSample.match(alphabetRegexV2).length;
 
 
 
-
+//Regular Expressions: Match Everything But Letters and Numbers************************
+let quoteSample = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/g; // Change this line
+let result = quoteSample.match(nonAlphabetRegex).length;
