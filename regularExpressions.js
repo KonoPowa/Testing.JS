@@ -181,3 +181,14 @@ console.log(ohStr.match(ohRegex))
 
 
 
+//Regular Expressions: Specify Only the Lower Number of Matches*************************
+let haStr = "Hazzzzah";
+let haRegex = /Haz{4,}ah/; // Change this line
+let result = haRegex.test(haStr);
+
+
+
+//Regular Expressions: Specify Exact Number of Matches***************************
+let timStr = "Timmmmber";
+let timRegex = /Tim{4}ber/; // Change this line
+let result = timRegex.test(timStr);
