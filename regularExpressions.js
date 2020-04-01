@@ -173,4 +173,11 @@ let result = sample.match(countNonWhiteSpace);
 
 
 
+//Regular Expressions: Specify Upper and Lower Number of Matches**************************
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6} no/; // Change this line
+let result = ohRegex.test(ohStr);
+console.log(ohStr.match(ohRegex))
+
+
 
