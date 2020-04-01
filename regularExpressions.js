@@ -146,4 +146,20 @@ let result = movieName.match(numRegex).length;
 
 
 
-//practicing REGEX
+//Regular Expressions: Match All Non-Numbers*************************
+let movieName = "2001: A Space Odyssey";
+let noNumRegex = /\D/g; // Change this line
+let result = movieName.match(noNumRegex).length;
+
+
+
+//Regular Expressions: Restrict Possible Usernames CHALLENGE*********************************CHALLENGE
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z]([0-9][0-9]+|[a-z]+\d*)$/i; // Change this line
+let result = userCheck.test(username);
+
+
+//Regular Expressions: Match Whitespace*****************************************************
+let sample = "Whitespace is important in separating words";
+let countWhiteSpace = /\s/g; // Change this line
+let result = sample.match(countWhiteSpace);
