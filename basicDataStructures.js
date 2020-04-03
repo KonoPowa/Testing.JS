@@ -39,3 +39,177 @@ console.log(popShift(['challenge', 'is', 'not', 'complete']));
 
 
 
+
+//Basic Data Structures: Remove Items Using splice()******************
+const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+// Only change code below this line
+arr.splice(0,2)
+arr.splice(1,2)
+arr.splice(2,2)
+// Only change code above this line
+console.log(arr);
+
+
+
+
+
+//Basic Data Structures: Add Items Using splice()**************************
+function htmlColorNames(arr) {
+  // Only change code below this line
+  arr.splice(0,2,'DarkSalmon','BlanchedAlmond')
+  // Only change code above this line
+  return arr;
+}
+
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+
+
+
+
+
+//Basic Data Structures: Copy Array Items Using slice()********************
+function forecast(arr) {
+  // Only change code below this line
+  arr = arr.slice(2,4)
+  return arr;//returns [warm,sunny]
+}
+
+// Only change code above this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+
+
+
+
+
+
+
+//Basic Data Structures: Copy an Array with the Spread Operator*******************
+function copyMachine(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+    // Only change code below this line
+    newArr.push([...arr])
+    // Only change code above this line
+    num--;
+  }
+  return newArr;
+}
+
+console.log(copyMachine([true, false, true], 2));
+
+
+
+
+
+
+
+//Basic Data Structures: Combine Arrays with the Spread Operator*****************
+function spreadOut() {
+  let fragment = ['to', 'code'];
+  let sentence = ['learning', ...fragment, 'is', 'fun']; // Change this line
+  return sentence;
+}
+
+console.log(spreadOut());
+
+
+
+
+
+
+
+//Basic Data Structures: Check For The Presence of an Element With indexOf()******************
+function quickCheck(arr, elem) {
+  // Only change code below this line
+  if (arr.indexOf(elem) >= 0){
+    return true
+  }
+  else{
+    return false
+  }
+  // Only change code above this line
+}
+
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+
+
+
+
+
+
+
+
+//Basic Data Structures: Iterate Through All an Array's Items Using For Loops*************
+function filteredArray(arr, elem) {
+  let newArr = [];
+  // Only change code below this line
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i].indexOf(elem) == -1){
+      newArr.push(arr[i]);
+    }
+  // Only change code above this line
+  
+}
+return newArr;
+}
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+
+
+
+
+//Basic Data Structures: Create complex multi-dimensional arrays************
+let myNestedArray = [
+  // Only change code below this line
+  [
+    ['unshift', false, 1, 2, 3, 'deep', 'nested'],
+      [
+        ['loop', 'shift', 6, 7, 1000, 'deeper'],
+          [ 
+            ['concat', false, true, 'spread', 'array'],
+            ['mutate', 1327.98, 'splice', 'slice', 'push'],
+            ['iterate', 1.3849, 7, 'deepest', 'arbitrary', 'depth']
+          ]
+      ]
+  ]
+  // Only change code above this line
+];
+
+
+
+
+
+//Basic Data Structures: Add Key-Value Pairs to JavaScript Objects*******************
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28
+};
+
+// Only change code below this line
+foods['bananas'] = 13
+foods['grapes'] = 35
+foods ['strawberries'] = 27
+// Only change code above this line
+
+console.log(foods);
+
+
+
+
+
+//Basic Data Structures: Modify an Object Nested Within an Object**********
+let userActivity = {
+  id: 23894201352,
+  date: 'January 1, 2017',
+  data: {
+    totalUsers: 51,
+    online: 42
+  }
+};
+
+// Only change code below this line
+userActivity['data'].online = 45
+// Only change code above this line
+
+console.log(userActivity);
