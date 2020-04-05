@@ -245,3 +245,22 @@ function titleCase(str) {
 }
 console.log(titleCase("I'm a little tea pot"))
 titleCase("I'm a little tea pot");
+
+
+
+
+
+
+
+
+//Basic Algorithm Scripting: Slice and Splice**************
+function frankenSplice(arr1, arr2, n) {
+  let newArray = arr2.slice();
+  for (let i = 0; i < arr1.length; i++){
+    newArray.splice(n,0,arr1[i])
+    n++
+  }
+  return newArray;
+}
+console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1))
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
