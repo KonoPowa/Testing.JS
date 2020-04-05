@@ -1,101 +1,33 @@
-//Basic Data Structures: Use an Array to Store a Collection of Data*******************
-let yourArray = ['hi',1,true,'bam','bam']; // Change this line
-
-
-
-
-//Basic Data Structures: Access an Array's Contents Using Bracket Notation***************
-let myArray = ["a", "b", "c", "d"];
-// Only change code below this line
-myArray[1] = "skadoosh"
-// Only change code above this line
-console.log(myArray);
-
-
-
-//Basic Data Structures: Add Items to an Array with push() and unshift()**********
-function mixedNumbers(arr) {
-  // Only change code below this line
-  arr.unshift('I', 2,'three')
-  arr.push(7, 'VIII', 9)
-  // Only change code above this line
-  return arr;
+//Basic Algorithm Scripting: Convert Celsius to Fahrenheit*************
+function convertToF(celsius) {
+  let fahrenheit;
+  fahrenheit = celsius * 9/5 + 32
+  return fahrenheit;
 }
 
-console.log(mixedNumbers(['IV', 5, 'six']));
-
-
-
-
-
-//Basic Data Structures: Remove Items from an Array with pop() and shift()*******
-function popShift(arr) {
-  let popped = arr.pop(); // Change this line
-  let shifted = arr.shift(); // Change this line
-  return [shifted, popped];
-}
-
-console.log(popShift(['challenge', 'is', 'not', 'complete']));
-
-
-
-
-//Basic Data Structures: Remove Items Using splice()******************
-const arr = [2, 4, 5, 1, 7, 5, 2, 1];
-// Only change code below this line
-arr.splice(0,2)
-arr.splice(1,2)
-arr.splice(2,2)
-// Only change code above this line
-console.log(arr);
-
-
-
-
-
-//Basic Data Structures: Add Items Using splice()**************************
-function htmlColorNames(arr) {
-  // Only change code below this line
-  arr.splice(0,2,'DarkSalmon','BlanchedAlmond')
-  // Only change code above this line
-  return arr;
-}
-
-console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
-
-
-
-
-
-//Basic Data Structures: Copy Array Items Using slice()********************
-function forecast(arr) {
-  // Only change code below this line
-  arr = arr.slice(2,4)
-  return arr;//returns [warm,sunny]
-}
-
-// Only change code above this line
-console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+convertToF(30);
 
 
 
 
 
 
-
-//Basic Data Structures: Copy an Array with the Spread Operator*******************
-function copyMachine(arr, num) {
-  let newArr = [];
-  while (num >= 1) {
-    // Only change code below this line
-    newArr.push([...arr])
-    // Only change code above this line
-    num--;
+//Basic Algorithm Scripting: Reverse a String*********************
+function reverseString(str) {
+  var result = "";
+  let strArray = [];
+  for (let i = 0; i < str.length; i++){
+    strArray.push(str[i])
+   
   }
-  return newArr;
+  for (let j = strArray.length - 1; j > -1; j--){
+    result += strArray[j]
+  }
+  return result;
 }
 
-console.log(copyMachine([true, false, true], 2));
+reverseString("hello");
+console.log(reverseString("Hello"))
 
 
 
@@ -103,14 +35,69 @@ console.log(copyMachine([true, false, true], 2));
 
 
 
-//Basic Data Structures: Combine Arrays with the Spread Operator*****************
-function spreadOut() {
-  let fragment = ['to', 'code'];
-  let sentence = ['learning', ...fragment, 'is', 'fun']; // Change this line
-  return sentence;
+
+
+//Basic Algorithm Scripting: Factorialize a Number*************************
+function factorialize(num) {
+  let newNum = 1
+  for (let i = 1; i <= num; i++ ){
+    newNum *= i
+    
+  }
+  return newNum
+  //return num;
+}
+console.log(factorialize(5))
+factorialize(5);
+
+
+
+
+
+
+
+
+
+
+
+
+//Basic Algorithm Scripting: Find the Longest Word in a String****************
+function findLongestWordLength(str) {
+  var strArr = str.split(" ")
+  //console.log(strArr)
+  var king = strArr[0].length;
+  for (let i = 0; i < strArr.length; i++){
+    if (strArr[i].length > king ){
+      king = strArr[i].length
+    }
+  }
+  console.log(king)
+  return king;
+}
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+
+
+
+
+
+//Basic Algorithm Scripting: Return Largest Numbers in Arrays*********************
+function largestOfFour(arr) {
+  let king = Number.NEGATIVE_INFINITY;
+  let kingArr = []
+    for (let i = 0; i < arr.length; i++){
+      king = Number.NEGATIVE_INFINITY
+      for (let j = 0; j < arr[i].length; j++){
+        if (arr[i][j] > king){
+          king = arr[i][j]
+        }
+      }
+      kingArr.push(king)
+    }
+  return kingArr;
 }
 
-console.log(spreadOut());
+console.log(largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]));
 
 
 
@@ -118,19 +105,19 @@ console.log(spreadOut());
 
 
 
-//Basic Data Structures: Check For The Presence of an Element With indexOf()******************
-function quickCheck(arr, elem) {
-  // Only change code below this line
-  if (arr.indexOf(elem) >= 0){
+
+
+//Basic Algorithm Scripting: Confirm the Ending*******************
+function confirmEnding(str, target) {
+  let newStr = str.substring(str.length - target.length, str.length + target.length)
+  if (newStr == target){
     return true
-  }
-  else{
+  }else{
     return false
   }
-  // Only change code above this line
 }
 
-console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+console.log(confirmEnding("Connor", "n"));
 
 
 
@@ -138,78 +125,123 @@ console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 
 
 
-
-
-//Basic Data Structures: Iterate Through All an Array's Items Using For Loops*************
-function filteredArray(arr, elem) {
-  let newArr = [];
-  // Only change code below this line
-  for (let i = 0; i < arr.length; i++){
-    if (arr[i].indexOf(elem) == -1){
-      newArr.push(arr[i]);
+//Basic Algorithm Scripting: Repeat a String Repeat a String******************
+function repeatStringNumTimes(str, num) {
+  let newStr = ""
+  let i = 0
+  if (num > 0){
+    while (i < num){
+      newStr = newStr + str
+      i++
     }
-  // Only change code above this line
+    return newStr
+  }
+  else{
+    return ""
+  }
+}
+console.log(repeatStringNumTimes("abc", 3))
+repeatStringNumTimes("abc", 3);
+
+
+
+
+
+
+
+
+//Basic Algorithm Scripting: Truncate a String********************
+function truncateString(str, num) {
+  let arr = []
+  let newStr = ""
+  if (str.length > num){
+    for (let i = 0; i < num; i++){
+      arr.push(str[i])
+    }
+    for (let i = 0; i < arr.length; i++){
+      newStr = newStr + arr[i]
+    }
+    newStr += "..."
+    return newStr;
+
+  }else{
+    return str
+  }
   
 }
-return newArr;
-}
-console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
-
-
-
-
-//Basic Data Structures: Create complex multi-dimensional arrays************
-let myNestedArray = [
-  // Only change code below this line
-  [
-    ['unshift', false, 1, 2, 3, 'deep', 'nested'],
-      [
-        ['loop', 'shift', 6, 7, 1000, 'deeper'],
-          [ 
-            ['concat', false, true, 'spread', 'array'],
-            ['mutate', 1327.98, 'splice', 'slice', 'push'],
-            ['iterate', 1.3849, 7, 'deepest', 'arbitrary', 'depth']
-          ]
-      ]
-  ]
-  // Only change code above this line
-];
-
-
-
-
-
-//Basic Data Structures: Add Key-Value Pairs to JavaScript Objects*******************
-let foods = {
-  apples: 25,
-  oranges: 32,
-  plums: 28
-};
-
-// Only change code below this line
-foods['bananas'] = 13
-foods['grapes'] = 35
-foods ['strawberries'] = 27
-// Only change code above this line
-
-console.log(foods);
-
-
-
-
-
-//Basic Data Structures: Modify an Object Nested Within an Object**********
-let userActivity = {
-  id: 23894201352,
-  date: 'January 1, 2017',
-  data: {
-    totalUsers: 51,
-    online: 42
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length))
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+//ALTERNATE^^
+function truncateString(str, num) {
+  // Clear out that junk in your trunk
+  if (str.length > num) {
+    return str.slice(0, num) + "...";
+  } else {
+    return str;
   }
-};
+}
 
-// Only change code below this line
-userActivity['data'].online = 45
-// Only change code above this line
 
-console.log(userActivity);
+
+
+
+
+
+
+
+//Basic Algorithm Scripting: Finders Keepers*********************
+function findElement(arr, func) {
+  let num = 0;
+  for (let i = 0; i < arr.length; i++){
+    num = arr[i]
+    if(func(num) === true){
+      return num
+    }
+  }
+  console.log(num)
+}
+console.log(findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }))
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+
+
+
+
+
+
+
+
+
+//Basic Algorithm Scripting: Boo who***************
+function booWho(bool) {
+  if( typeof(bool) === 'boolean'){
+  return true
+  }
+  else{
+  return false;
+  }
+  
+}
+console.log(booWho([1,2,3]))
+booWho([1,2,3]);
+//ALTERNATE^^
+function booWho(bool) {
+  return typeof bool === "boolean";
+}
+
+
+
+
+
+
+//Basic Algorithm Scripting: Title Case a Sentence************
+function titleCase(str) {
+  var newStr = str.toLowerCase().split(" ");
+  for (let i = 0; i < newStr.length; i++){
+  newStr[i] = newStr[i].charAt(0).toUpperCase() + newStr[i].substring(1)
+  }
+  
+  return newStr.join(" ");
+}
+console.log(titleCase("I'm a little tea pot"))
+titleCase("I'm a little tea pot");
