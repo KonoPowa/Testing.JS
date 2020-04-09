@@ -326,3 +326,20 @@ getIndexToIns([40, 60], 50);
 
 
 
+//Basic Algorithm Scripting: Mutations***********************
+function mutation(arr) {
+  let newArr = []
+  for (let i = 0; i < arr.length; i++){
+    newArr[i] = arr[i].toLowerCase();
+  }
+    for (let j = 0; j < arr[1].length; j++){
+      if (newArr[0].indexOf(newArr[1][j]) < 0){
+        return false
+      }
+      
+  }
+return true
+
+}
+console.log(mutation(["hello", "hey"]))
+mutation(["hello", "hey"]);
