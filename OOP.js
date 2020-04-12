@@ -13,7 +13,7 @@ dog.sayLegs();
 
 
 
-//Object Oriented Programming: Make Code More Reusable with the this Keyword*************************
+//Object Oriented Programming: Make Code More Reusable with the this Keyword***************************
 let dog = {
   name: "Spot",
   numLegs: 4,
