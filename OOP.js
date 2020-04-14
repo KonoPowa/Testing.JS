@@ -1,4 +1,4 @@
-//Object Oriented Programming: Create a Method on an Object*********
+//Object Oriented Programming: Create a Method on an Object**********
 let dog = {
   name: "Spot",
   numLegs: 4,
