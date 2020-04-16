@@ -486,3 +486,46 @@ function sliceArray(anim, beginSlice, endSlice) {
 }
 var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
 sliceArray(inputAnim, 1, 3);
+
+
+
+
+
+
+
+
+
+
+
+//Functional Programming: Remove Elements from an Array Using slice Instead of splice******************
+function nonMutatingSplice(cities) {
+  // Only change code below this line
+  return cities.slice(0,3);
+
+  // Only change code above this line
+}
+var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+nonMutatingSplice(inputCities);
+console.log(nonMutatingSplice(inputCities))
+
+
+
+
+
+
+
+
+
+
+
+
+//Functional Programming: Combine Two Arrays Using the concat Method*******************************
+function nonMutatingConcat(original, attach) {
+  // Only change code below this line
+  return original.concat(attach)
+
+  // Only change code above this line
+}
+var first = [1, 2, 3];
+var second = [4, 5];
+nonMutatingConcat(first, second);
