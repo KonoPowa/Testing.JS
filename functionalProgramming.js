@@ -808,3 +808,49 @@ function sentensify(str) {
   // Only change code above this line
 }
 sentensify("May-the-force-be-with-you");
+
+
+
+
+
+
+
+
+
+
+
+
+//Functional Programming: Apply Functional Programming to Convert Strings to URL Slugs*********************
+// The global variable
+var globalTitle = "Winter Is Coming";
+
+// Only change code below this line
+function urlSlug(title) {
+  return title.toLowerCase().trim().split(/\W+/).filter((x) => x != " ").join("-")
+  }
+// Only change code above this line
+console.log(urlSlug(" Winter Is  Coming"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Functional Programming: Use the every Method to Check that Every Element in an Array Meets a Criteria******************
+function checkPositive(arr) {
+  // Only change code below this line
+  return arr.every(function(currentValue){
+    return currentValue > 0;
+  });
+  
+  // Only change code above this line
+}
+checkPositive([1, 2, 3, -4, 5]);
+console.log(checkPositive([1, 2, 3, -4, 5]))
