@@ -700,3 +700,111 @@ console.log(getRating(watchList));
 
 
 
+//Functional Programming: Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem*******************
+const squareList = (arr) => {
+  // Only change code below this line
+  let filterArr = []
+  let filterList =  arr.filter(function(integer){
+    var result = (integer % 1) === 0;
+    if (integer > 0 & result === true){
+      filterArr.push(Math.pow(integer,2))
+    }
+  });
+  return filterArr;
+  // Only change code above this line
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
+
+
+
+
+
+
+
+
+//Functional Programming: Sort an Array Alphabetically using the sort Method****************************
+function alphabeticalOrder(arr) {
+  // Only change code below this line
+  return arr.sort(function(a,b){
+    return a === b ? 0 : a < b ? -1 : 1;
+  });
+  // Only change code above this line
+}
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Functional Programming: Return a Sorted Array Without Changing the Original Array********************
+var globalArray = [5, 6, 3, 2, 9];
+function nonMutatingSort(arr) {
+  // Only change code below this line
+  let newArr = [...globalArray]
+  newArr.sort(function(a,b){
+    return a - b
+  })
+return newArr
+  // Only change code above this line
+}
+nonMutatingSort(globalArray);
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Functional Programming: Split a String into an Array Using the split Method******************************
+function splitify(str) {
+  // Only change code below this line
+  let bySpace = str.split(/[\s-.,]/)
+  console.log(bySpace)
+  return bySpace
+  // Only change code above this line
+}
+splitify("Hello World,I-am code");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Functional Programming: Combine an Array into a String Using the join Method*****************************
+function sentensify(str) {
+  // Only change code below this line
+  let newStr = str.split(/[-.,]/)
+  let newerStr = newStr.join(" ")
+  console.log(newerStr)
+  return newerStr
+  // Only change code above this line
+}
+sentensify("May-the-force-be-with-you");
