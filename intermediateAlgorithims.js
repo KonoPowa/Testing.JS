@@ -22,7 +22,7 @@ sumAll([1, 4]);
 
 
 
-//Intermediate Algorithm Scripting: Diff Two Arrays****************
+//Intermediate Algorithm Scripting: Diff Two Arrays*****************
 function diffArray(arr1, arr2) {
   var newArr = [];
   let newerArr = arr1.filter(function(current){
