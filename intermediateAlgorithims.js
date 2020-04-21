@@ -22,7 +22,7 @@ sumAll([1, 4]);
 
 
 
-//Intermediate Algorithm Scripting: Diff Two Arrays*****************
+//Intermediate Algorithm Scripting: Diff Two Arrays****************
 function diffArray(arr1, arr2) {
   var newArr = [];
   let newerArr = arr1.filter(function(current){
@@ -39,3 +39,35 @@ function diffArray(arr1, arr2) {
 }
 
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+
+
+
+
+
+
+
+
+
+//Intermediate Algorithm Scripting: Seek and Destroy
+function destroyer(arr) {
+  let argArr = []
+  for(let i = 1; i < arguments.length; i++){
+    argArr.push(arguments[i])
+  }
+  let newerArr = arr.filter(function(current){
+    return argArr.indexOf(current) < 0;
+  })
+  return newerArr;
+}
+
+console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5));
+
+
+
+
+
+
+
+
+
