@@ -71,3 +71,20 @@ console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5));
 
 
 
+//Intermediate Algorithm Scripting: Wherefore art thou***************************
+function whatIsInAName(collection, source) {
+  var arr = [];
+  // Only change code below this line
+  let prop = Object.keys(source)
+  for(let i = 0; i < collection.length; i++){
+    if (collection[i].hasOwnProperty(prop[0]) && collection[i][prop[0]] === source[prop[0]] && collection[i][prop[1]] === source[prop[1]]){
+      arr.push(collection[i])
+    }
+  }
+  return arr
+  // Only change code above this line
+}
+
+
+
+console.log(whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }))
