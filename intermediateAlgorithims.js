@@ -110,3 +110,32 @@ function spinalCase(str) {
 
 
 console.log(spinalCase("This Is Spinal Tap") )
+
+
+
+
+
+
+
+
+
+
+
+
+//Intermediate Algorithm Scripting: Pig Latin*************************
+function translatePigLatin(str) {
+  let vowelRegex = /^[aeiou]/
+  let consonantRegex = /[bcdfghjklmnpqrstvwxyz]+/
+  if (vowelRegex.test(str) === true){
+    return str + "way"
+  }else if (consonantRegex.test(str)){
+    let beginning = str.match(consonantRegex)
+    let slice = str.slice(beginning[0].length,)
+    return slice + beginning[0] + "ay"
+  }
+  vowelRegex.test(str)
+  console.log(vowelRegex.test(str))
+  return str;
+}
+
+console.log(translatePigLatin("glove"));
