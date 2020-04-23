@@ -139,3 +139,31 @@ function translatePigLatin(str) {
 }
 
 console.log(translatePigLatin("glove"));
+
+
+
+
+
+
+
+
+
+
+
+
+//Intermediate Algorithm Scripting: Search and Replace***********************
+function myReplace(str, before, after) {
+  let beforeR = /[A-Z]/
+  let afterR = /[a-z]/
+  if (beforeR.test(before) == true && afterR.test(after) == true){
+    after = after.slice(0,1).toUpperCase() + after.slice(1,)
+    str = str.replace(before, after)
+    return str
+  }else{
+    return str.replace(before, after)
+  }
+  return str;
+}
+
+
+console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
