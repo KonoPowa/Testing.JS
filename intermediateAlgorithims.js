@@ -88,3 +88,25 @@ function whatIsInAName(collection, source) {
 
 
 console.log(whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Intermediate Algorithm Scripting: Spinal Tap Case********************
+function spinalCase(str) {
+  str = str.split(/(?=[A-Z])/).join("-").split(/[\s_]/).join("-").replace(/--/g,"-").toLowerCase()
+  return str;
+}
+
+
+console.log(spinalCase("This Is Spinal Tap") )
