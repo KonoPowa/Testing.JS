@@ -220,3 +220,24 @@ function pairElement(str) {
 
 
 
+
+
+
+
+
+//Intermediate Algorithm Scripting: Missing letters******************************
+function fearNotLetter(str) {
+  console.log(str)
+  for(let i = 0; i < str.length; i++){
+    if (str.charCodeAt(i) === str.charCodeAt(i + 1) - 2){
+      let charCode = str.charCodeAt(i + 1)
+      charCode = parseInt(charCode, 10)
+      return String.fromCharCode(charCode - 1)
+    }
+  }
+  return undefined;
+}
+
+console.log(fearNotLetter("abce"));
+console.log("c".charCodeAt(0))
+console.log("e".charCodeAt(0))
