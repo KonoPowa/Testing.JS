@@ -265,3 +265,21 @@ function uniteUnique(arr) {
 }
 
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
+
+
+
+
+
+
+
+
+//Intermediate Algorithm Scripting: Convert HTML Entities********************************
+function convertHTML(str) {
+  str = str.replace("&", "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+  .replace(/"/g, "&quot;").replace(/'/g, "&apos;")
+  console.log(str)
+  return str;
+}
+
+console.log(convertHTML("Hamburgers < Pizza < Tacos"));
