@@ -239,5 +239,29 @@ function fearNotLetter(str) {
 }
 
 console.log(fearNotLetter("abce"));
-console.log("c".charCodeAt(0))
-console.log("e".charCodeAt(0))
+
+
+
+
+
+
+
+
+
+
+
+
+//Intermediate Algorithm Scripting: Sorted Union*****************************
+function uniteUnique(arr) {
+  var newArr = []
+  for(let i = 0; i < arguments.length; i++){
+    let push = arguments[i].filter(function(current){
+    return newArr.indexOf(current) < 0;
+      })
+    newArr = newArr.concat(push)
+    }
+  console.log(newArr)
+  return newArr;
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
