@@ -167,3 +167,56 @@ function myReplace(str, before, after) {
 
 
 console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
+
+
+
+
+
+
+
+
+
+
+
+
+//Intermediate Algorithm Scripting: DNA Pairing************************
+function pairElement(str) {
+  let arr = []
+  for (let i = 0; i < str.length; i++){
+    if (str[i] === "G"){
+      arr.push(["G","C"])
+    }else if(str[i] === "C"){
+      arr.push(["C", "G"])
+    }else if(str[i] === "A"){
+      arr.push(["A", "T"])
+  }else if(str[i] === "T"){
+      arr.push(["T", "A"])
+
+}
+  }
+console.log(arr)
+  return arr;
+}
+console.log(pairElement("GCG"));
+
+//ALTERNATIVE SOLUTION^^^^^^^^^^^^^^^^^^^^^^
+
+function pairElement(str) {
+  var pairs = {
+    "A": ["A", "T"],
+    "T": ["T", "A"],
+    "C": ["C", "G"],
+    "G": ["G", "C"]
+  };
+  
+  return str.split("").map(function(elem) {
+    return pairs[elem];
+  });
+}
+
+
+
+
+
+
+
