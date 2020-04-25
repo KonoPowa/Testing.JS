@@ -283,3 +283,30 @@ function convertHTML(str) {
 }
 
 console.log(convertHTML("Hamburgers < Pizza < Tacos"));
+
+
+
+
+
+
+
+
+
+
+
+//Intermediate Algorithm Scripting: Sum All Odd Fibonacci Numbers*******************
+function sumFibs(num) {
+  let sequence = 1;
+  let sequenceArr = [1,1];
+  for (let i = 1; i < num; i++){
+    sequence = sequence + sequenceArr[i - 1];
+    sequenceArr.push(sequence)
+  }
+  //console.log(sequenceArr)
+ let answer = sequenceArr.filter(current => current % 2 !== 0 && current <= num).reduce(function(total,current){
+    return current + total
+  });
+ 
+  return answer
+}
+console.log(sumFibs(1));
