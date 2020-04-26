@@ -310,3 +310,49 @@ function sumFibs(num) {
   return answer
 }
 console.log(sumFibs(1));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Intermediate Algorithm Scripting: Sum All Primes**************************
+function sumPrimes(num) {
+  let arr = []
+  for (let i = 0; i < num + 1; i++){
+    arr.push(i)
+  }
+  //COPIED**
+   var sieve = [], i, j, primes = [];
+    for (i = 2; i <= num; ++i) {
+        if (!sieve[i]) {
+            // i has not been marked -- it is prime
+            primes.push(i);
+            for (j = i << 1; j <= num; j += i) {
+                sieve[j] = true;
+            }
+        }
+    }
+	//COPIED^^
+    console.log(primes)
+    let answer = primes.reduce(function(total, current){
+      return total + current
+    })
+    return answer;
+
+
+    
+
+  console.log(arr)
+  return num;
+}
+console.log()
+sumPrimes(10);
