@@ -373,27 +373,29 @@ sumPrimes(10);
 //Intermediate Algorithm Scripting: Smallest Common Multiple*****************************
 function smallestCommons(arr) {
   let newArr = [];
+  let range = newArr.sort()
   for (let i = Math.min.apply(Math,arr); i < Math.max.apply(Math, arr) + 1; i++){
     newArr.push(i)
   }
   let sortDesc = function(a,b){
     return b - a
   }
-  newArr.sort(sortDesc)
-  console.log(newArr)
-  let answer = newArr[0] * newArr[1];
-  for (let j = 2; j < newArr.length; j++){
-    if (answer % newArr[j] === 0){
-      break;
+  var x = true;
+  var LCM = newArr[0];
+  while(x){
+    LCM++
+    for (var j = newArr[0]; j <= newArr[newArr.length - 1]; j++){
+      if (LCM % j !== 0){
+        break;
+      }else if( j == newArr[newArr.length - 1]){
+        x = false;
+        break;
+      }
     }
-    else{
-      answer = answer * newArr[j]
-    }
-    
   }
-  console.log(answer)
-  return answer;
+  return LCM ;
 }
+
 console.log(smallestCommons([2, 10]))
 
 
