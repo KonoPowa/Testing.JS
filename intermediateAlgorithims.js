@@ -400,3 +400,148 @@ console.log(smallestCommons([2, 10]))
 
 
 
+
+
+
+
+
+
+
+
+//Intermediate Algorithm Scripting: Drop it******************************
+function dropElements(arr, func) {
+    let newArr = arr.slice(0,)
+    let newerArr = arr.slice(0,)
+    for (let i = 0; i < newerArr.length; i++){
+      if (func(newerArr[i]) === false){
+        newArr.shift()
+      }else{
+        break;
+      }
+    }
+    return newArr
+}
+console.log(dropElements([0, 1, 0, 1], function(n) {return n === 1;}))
+
+
+
+
+
+
+
+
+
+
+
+//Intermediate Algorithm Scripting: Steamroller***********************************
+function steamrollArray(arr) {
+  var flattenedArray = [];
+
+  // Create function that adds an element if it is not an array.
+  // If it is an array, then loops through it and uses recursion on that array.
+  var flatten = function(arg) {
+    if (!Array.isArray(arg)) {
+      flattenedArray.push(arg);
+    } else {
+      for (var a in arg) {
+        flatten(arg[a]);
+      }
+    }
+  };
+
+  // Call the function for each element in the array
+  arr.forEach(flatten);
+  return flattenedArray;
+}
+//COPIED^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Intermediate Algorithm Scripting: Binary Agents*****************************
+function binaryAgent(str) {
+  let arrStr = str.split(" ").map(bin => String.fromCharCode(parseInt(bin, 2))).join("")
+  console.log(arrStr)
+  console.log(String.fromCharCode(arrStr[2]))
+  return arrStr;
+}
+
+binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Intermediate Algorithm Scripting: Everything Be True**************************************
+function truthCheck(collection, pre) {
+  let answer = "anything"
+  for (let i = 0; i < collection.length; i++){
+    if (collection[i].hasOwnProperty(pre)){
+      if (Boolean(collection[i][pre]) == false ){
+        answer = false;
+        break;
+      }
+      else{
+        answer = true;
+      }
+    }
+  
+  if (!collection[i].hasOwnProperty(pre)){
+    answer = false;
+    break;
+  }
+
+    if (answer === false){
+      break;
+    }
+  }
+  console.log(collection[0][pre])
+  console.log()
+  return answer;
+}
+
+console.log(truthCheck([{"single": "yes"}], "single"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
