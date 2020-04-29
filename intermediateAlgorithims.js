@@ -527,6 +527,25 @@ function truthCheck(collection, pre) {
 }
 
 console.log(truthCheck([{"single": "yes"}], "single"));
+//ALTERNATE SOLUTION^^^^^^^^^^^^^^^^^^^^^^
+function truthCheck(collection, pre) {
+for(i=0;i<collection.length;i++){
+if(!collection[i][pre])
+return false;
+}
+return true;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
